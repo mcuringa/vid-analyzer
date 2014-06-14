@@ -1,0 +1,23 @@
+<!-- home template -->
+
+{% extends "base.html" %}
+{% block title %} Search Results {% endblock %}
+
+{% block body %}
+
+<h2>The Results</h2>
+
+<ul>
+  <li class="video" style="width:600px; height:400px; background-color:#ea4">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/XI9dEu_7kno?list=PL54E2C3582EECEE51" frameborder="0" allowfullscreen></iframe>
+    <input type="button" onclick="removeLI();"/>
+  </li>
+  <li class="video" style="width:600px; height:400px; background-color:#ea4">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/VillgkNhPbo" frameborder="0" allowfullscreen></iframe>
+  </li>
+  <li class="video" style="width:600px; height:400px; background-color:#ea4">
+    <iframe width="420" height="315" src="//www.youtube.com/embed/NJHsDD9hhZc" frameborder="0" allowfullscreen></iframe>
+  </li>
+</ul>
+
+{% endblock %}

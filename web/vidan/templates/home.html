@@ -3,9 +3,11 @@
 {% extends "base.html" %}
 
 
+
 {% block body %}
 <h2>Welcome to the Video Analyzer</h2>
 
+<<<<<<< HEAD
 <form id="login" action="/login" method="post">
     {% csrf_token %}
     <p>
@@ -20,6 +22,10 @@
     <input type="submit" name="login" value="join">
 
 </form>
+=======
+It works...{{ index.html }}
+>>>>>>> 9f16f4227656bbbeaf3fff60446de9ec9c8593ed
+
 
 
 {% endblock %}

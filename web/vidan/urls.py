@@ -10,5 +10,5 @@ urlpatterns = patterns('',
     url(r'^upload$', 'vidan.views.upload'),
     url(r'^login$', 'vidan.views.login_user'),
     url(r'^dataset$', 'vidan.views.dataset'),
-
+    url(r'^results$', 'vidan.views.results'),
 )

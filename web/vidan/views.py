@@ -48,9 +48,12 @@ def dataset(request):
     context = { "form": form }
     return render(request, 'dataset.html', context)
 
+
 @login_required
 def upload(request):
 
 	return render(request, 'upload.html')
 
-
+@login_required
+def results(request):
+  return render(request, 'results.html')
