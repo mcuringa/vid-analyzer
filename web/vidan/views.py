@@ -9,11 +9,7 @@ from django.contrib import messages
 from vidan.models import *
 
 def home(request):
-    term = request.POST["query"]
-    vidList = videos.search(term)
-    
-    context = {"videos": vidList}
-
+    context = {}
     return render(request, 'home.html', context)
 
 def upload(request):
@@ -21,4 +17,5 @@ def upload(request):
 
 	return render(request, 'upload.html')
 
-
+def results(request):
+  return render(request, 'results.html')
