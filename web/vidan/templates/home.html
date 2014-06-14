@@ -4,14 +4,22 @@
 
 
 {% block body %}
+<h2>Welcome to the Video Analyzer</h2>
 
-It works...{{ index.html }}
-<h2>The Results</h2>
-<ul>
-{% for vid in videos %}
-	<li>{{vid.name}} - {{vid.length}}
-{% endfor %}
-</ul>
+<form id="login" action="/login" method="post">
+    {% csrf_token %}
+    <p>
+        <label>username</label>
+        <input type="text" name="username" />
+    </p>
+    <p>
+        <label>password</label>
+        <input type="password" name="password" />
+    </p>
+    <input type="submit" name="login" value="login"> or 
+    <input type="submit" name="login" value="join">
+
+</form>
 
 
 {% endblock %}

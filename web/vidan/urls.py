@@ -5,14 +5,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
-    
-
-    url(r'^$', 'vidan.views.home', name='home'),
-    url(r'^home$', 'vidan.views.home', name='home'),
-    url(r'^upload$', 'vidan.views.upload', name='upload'),
-
-
-    #url(r'^admin/', include(admin.site.urls)),
-
+    url(r'^$', 'vidan.views.home'),
+    url(r'^home$', 'vidan.views.home'),
+    url(r'^upload$', 'vidan.views.upload'),
+    url(r'^login$', 'vidan.views.login_user'),
+    url(r'^dataset$', 'vidan.views.dataset'),
 
 )
