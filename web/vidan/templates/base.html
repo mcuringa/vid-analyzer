@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>{% block title %}Kultara Connect||Video Analyzer{% endblock %}</title>
+    <meta charset="utf-8">
+    <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+    <script src="/static/js/jquery.js"></script>
+
+    <script src="/static/js/vidan.js"></script>
+
+    
+</head>
+
+<body>
+    <header class="navbar" role="navigation">
+
+    </header>
+      <section id="main">
+        <div id="messages" class="panel panel-warning 
+          {% if messages %}
+            messages_present
+          {% endif %} ">
+          <div class="panel-heading"><span class="glyphicon glyphicon-exclamation-sign"></span></div>
+
+        {% block body %}Every child template should put something here...{% endblock %}
+      </section>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
