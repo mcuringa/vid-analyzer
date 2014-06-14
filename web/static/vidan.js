@@ -9,7 +9,10 @@
 
 
 
-
+function trythis()
+{
+  alert();
+}
 
 function removeLI()
 {
