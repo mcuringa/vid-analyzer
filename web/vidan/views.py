@@ -9,10 +9,16 @@ from django.contrib import messages
 from vidan.models import *
 
 def home(request):
+    term = request.POST["query"]
+    vidList = videos.search(term)
     
-    context = {"foo": "this is a test"}
+    context = {"videos": vidList}
 
     return render(request, 'home.html', context)
 
+def upload(request):
+
+
+	return render(request, 'upload.html')
 
 
