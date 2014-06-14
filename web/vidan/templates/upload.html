@@ -2,18 +2,23 @@
 
 
 {% block body %}
-<form action="upload_file.php" method="post" enctype="multipart/form-data">
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#msgid").html("<label for='file'>Filename:</label><input type='file' name='file1' id='file1'><br>");
-		}); 
-    </script>
- 
+<form action="upload_file.php" method="post" enctype="multipart/form-data"> 
 <div id="msgid"><label for='file'>Filename:</label><input type='file' name='file1' id='file1'><br></div>
 
-<input type="button" name="more" value="More" onClick="addUploadItem();"><br />
+<input id="more_btn" type="button" name="more" value="More""><br />
 <input type="submit" name="submit" value="Next">
 
 </form>
 {% endblock %}
 
+
+
+{% block js %}
+$(document).ready(function(){
+
+    $( "#more_btn" ).click( addUploadItem );
+
+    $("#msgid").html("<label for='file'>Filename:</label><input type='file' name='file1' id='file1'><br>");
+}); 
+
+{% endblock %}
