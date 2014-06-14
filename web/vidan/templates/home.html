@@ -5,6 +5,13 @@
 
 {% block body %}
 
-It works...{{ foo }}
+It works...{{ index.html }}
+<h2>The Results</h2>
+<ul>
+{% for vid in videos %}
+	<li>{{vid.name}} - {{vid.length}}
+{% endfor %}
+</ul>
+
 
 {% endblock %}
