@@ -4,7 +4,7 @@
 {% block body %}
 <h2>Name your dataset</h2>
 
-<form id="dataset" action="/dataset" method="post">
+<form id="dataset" action="/save_dataset" method="post">
     {% csrf_token %}
 
     {{form.as_p}}

@@ -7,8 +7,7 @@
 {% block body %}
 <h2>Welcome to the Video Analyzer</h2>
 
-<<<<<<< HEAD
-<form id="login" action="/login" method="post">
+<form id="login" class="form-horizontal" action="/login" method="post">
     {% csrf_token %}
     <p>
         <label>username</label>
@@ -18,14 +17,9 @@
         <label>password</label>
         <input type="password" name="password" />
     </p>
-    <input type="submit" name="login" value="login"> or 
-    <input type="submit" name="login" value="join">
+    <input type="submit" class="btn btn-default" name="login" value="login"> or 
+    <input type="submit" class="btn btn-default" name="login" value="join">
 
 </form>
-=======
-It works...{{ index.html }}
->>>>>>> 9f16f4227656bbbeaf3fff60446de9ec9c8593ed
-
-
 
 {% endblock %}

@@ -48,6 +48,24 @@ def dataset(request):
     context = { "form": form }
     return render(request, 'dataset.html', context)
 
+@login_required
+def save_dataset(request):
+    form = DataSetForm(request.POST)
+    form.instance.creator = request.user
+    dataset = form.save()
+
+    messages.add_message(request, messages.INFO, 'Your dataset has been created.')
+
+    try:
+      return HttpResponseRedirect("/upload")
+    except Exception as ex:
+        print(ex)
+
+        messages.add_message(request, messages.INFO, 'Please fill out all required fields.')
+
+    context = { "form": form }
+    return render(request, 'dataset.html', context)
+
 
 @login_required
 def upload(request):
